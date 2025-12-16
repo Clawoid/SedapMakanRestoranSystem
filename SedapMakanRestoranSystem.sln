@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SedapMakanRestoranSystem", "SedapMakanRestoranSystem.csproj", "{4F5C8199-3126-40BC-BCAD-FD20D26F43D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F5C8199-3126-40BC-BCAD-FD20D26F43D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F5C8199-3126-40BC-BCAD-FD20D26F43D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F5C8199-3126-40BC-BCAD-FD20D26F43D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F5C8199-3126-40BC-BCAD-FD20D26F43D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {715F1C21-A3A1-405E-B2B1-03F0C4D7A36B}
+	EndGlobalSection
+EndGlobal

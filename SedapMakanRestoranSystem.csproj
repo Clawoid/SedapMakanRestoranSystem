@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F5C8199-3126-40BC-BCAD-FD20D26F43D2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SedapMakanRestoranSystem</RootNamespace>
+    <AssemblyName>SedapMakanRestoranSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addMenu.Designer.cs">
+      <DependentUpon>addMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOrRemoveUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOrRemoveUsersForm.Designer.cs">
+      <DependentUpon>AddOrRemoveUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRemoveUpdateUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRemoveUpdateUsersForm.Designer.cs">
+      <DependentUpon>AddRemoveUpdateUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cartForm.Designer.cs">
+      <DependentUpon>cartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CartItem.cs" />
+    <Compile Include="checkOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkOut.Designer.cs">
+      <DependentUpon>checkOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chefDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chefDash.Designer.cs">
+      <DependentUpon>chefDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="custMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custMenu.Designer.cs">
+      <DependentUpon>custMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer.Designer.cs">
+      <DependentUpon>customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EWalletUsageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EWalletUsageForm.Designer.cs">
+      <DependentUpon>EWalletUsageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="feedbackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="feedbackForm.Designer.cs">
+      <DependentUpon>feedbackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manageMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manageMenu.Designer.cs">
+      <DependentUpon>manageMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs" />
+    <Compile Include="managerCustomerTopUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerCustomerTopUpForm.Designer.cs">
+      <DependentUpon>managerCustomerTopUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerDashboard.Designer.cs">
+      <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerFeedbackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerFeedbackForm.Designer.cs">
+      <DependentUpon>managerFeedbackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managerRefundsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managerRefundsForm.Designer.cs">
+      <DependentUpon>managerRefundsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs" />
+    <Compile Include="orderStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orderStatus.Designer.cs">
+      <DependentUpon>orderStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesReportForm.Designer.cs">
+      <DependentUpon>SalesReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet111.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet111.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SedapMakanDBDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SedapMakanDBDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="updateProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateProfileForm.Designer.cs">
+      <DependentUpon>updateProfileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="viewOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewOrders.Designer.cs">
+      <DependentUpon>viewOrders.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addMenu.resx">
+      <DependentUpon>addMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOrRemoveUsersForm.resx">
+      <DependentUpon>AddOrRemoveUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRemoveUpdateUsersForm.resx">
+      <DependentUpon>AddRemoveUpdateUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cartForm.resx">
+      <DependentUpon>cartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkOut.resx">
+      <DependentUpon>checkOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chefDash.resx">
+      <DependentUpon>chefDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custMenu.resx">
+      <DependentUpon>custMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer.resx">
+      <DependentUpon>customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EWalletUsageForm.resx">
+      <DependentUpon>EWalletUsageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedbackForm.resx">
+      <DependentUpon>feedbackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageMenu.resx">
+      <DependentUpon>manageMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerCustomerTopUpForm.resx">
+      <DependentUpon>managerCustomerTopUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerDashboard.resx">
+      <DependentUpon>ManagerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerFeedbackForm.resx">
+      <DependentUpon>managerFeedbackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managerRefundsForm.resx">
+      <DependentUpon>managerRefundsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orderStatus.resx">
+      <DependentUpon>orderStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SalesReportForm.resx">
+      <DependentUpon>SalesReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateProfileForm.resx">
+      <DependentUpon>updateProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewOrders.resx">
+      <DependentUpon>viewOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SedapMakanDBDataSet10.xsc">
+      <DependentUpon>SedapMakanDBDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet10.xss">
+      <DependentUpon>SedapMakanDBDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet11.xsc">
+      <DependentUpon>SedapMakanDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet11.xss">
+      <DependentUpon>SedapMakanDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet111.xsc">
+      <DependentUpon>SedapMakanDBDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet111.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet111.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet111.xss">
+      <DependentUpon>SedapMakanDBDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet12.xsc">
+      <DependentUpon>SedapMakanDBDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet12.xss">
+      <DependentUpon>SedapMakanDBDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet13.xsc">
+      <DependentUpon>SedapMakanDBDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet13.xss">
+      <DependentUpon>SedapMakanDBDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet14.xsc">
+      <DependentUpon>SedapMakanDBDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet14.xss">
+      <DependentUpon>SedapMakanDBDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet15.xsc">
+      <DependentUpon>SedapMakanDBDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet15.xss">
+      <DependentUpon>SedapMakanDBDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet16.xsc">
+      <DependentUpon>SedapMakanDBDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet16.xss">
+      <DependentUpon>SedapMakanDBDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet17.xsc">
+      <DependentUpon>SedapMakanDBDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet17.xss">
+      <DependentUpon>SedapMakanDBDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet18.xsc">
+      <DependentUpon>SedapMakanDBDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet18.xss">
+      <DependentUpon>SedapMakanDBDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet2.xsc">
+      <DependentUpon>SedapMakanDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet2.xss">
+      <DependentUpon>SedapMakanDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet21.xsc">
+      <DependentUpon>SedapMakanDBDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet21.xss">
+      <DependentUpon>SedapMakanDBDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet3.xsc">
+      <DependentUpon>SedapMakanDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet3.xss">
+      <DependentUpon>SedapMakanDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet4.xsc">
+      <DependentUpon>SedapMakanDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet4.xss">
+      <DependentUpon>SedapMakanDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet5.xsc">
+      <DependentUpon>SedapMakanDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet5.xss">
+      <DependentUpon>SedapMakanDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet6.xsc">
+      <DependentUpon>SedapMakanDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet6.xss">
+      <DependentUpon>SedapMakanDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet7.xsc">
+      <DependentUpon>SedapMakanDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet7.xss">
+      <DependentUpon>SedapMakanDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet8.xsc">
+      <DependentUpon>SedapMakanDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet8.xss">
+      <DependentUpon>SedapMakanDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet9.xsc">
+      <DependentUpon>SedapMakanDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="SedapMakanDBDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SedapMakanDBDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SedapMakanDBDataSet9.xss">
+      <DependentUpon>SedapMakanDBDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Beige and Brown Restaurant Circle Logo.png" />
+    <Content Include="Resources\Beige and Brown Restaurant Circle Logo.png" />
+    <None Include="Resources\Beige and Brown Restaurant Circle Logo1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
