@@ -17,3 +17,4 @@ A desktop-based Restaurant Management System developed using C# and Windows Form
 
 ## Author
 Ahmed Ali
+Ramiz Abd Elrahman Ahmed Saifeldin
